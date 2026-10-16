@@ -1,0 +1,1846 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="dynamic-title">Recicladora MetalPlast | Reciclamos Hoy, Transformamos Mañana</title>
+    <meta id="dynamic-meta-desc" name="description" content="Centro de acopio autorizado del Club de Recicladores Adelca. Recibimos cartón, plástico PET, cobre, aluminio y fierro al mejor precio en Cuenca.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://recicladorametalplast.com/">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            green: '#22c55e',
+                            darkgreen: '#15803d',
+                            dark: '#111827',
+                            card: '#1f2937',
+                            accent: '#10b981'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Montserrat', sans-serif; }
+    </style>
+</head>
+
+<body class="bg-gray-950 text-gray-100 antialiased selection:bg-brand-green selection:text-white">
+
+	<!-- Top Bar Institucional -->
+	<div class="bg-gray-950 border-b border-gray-900 text-xs text-gray-400 py-2 px-4 sm:px-6 lg:px-8">
+		<div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+			<div class="flex items-center space-x-2">
+				<span class="bg-red-600 text-white px-2 py-0.5 rounded text-[10px] font-black uppercase tracking-wider">ADELCA</span>
+				<span class="font-semibold text-gray-300">Miembros Club de Recicladores</span>
+			</div>
+			
+			<!-- REDES SOCIALES EN LA BARRA SUPERIOR -->
+			<div class="flex items-center space-x-3">
+				<a href="https://www.tiktok.com/@chichico736?_r=1&_t=ZS-9ATcIfmYhL0" target="_blank" class="text-gray-400 hover:text-brand-green transition" title="TikTok">
+					<i class="fa-brands fa-tiktok text-sm"></i>
+				</a>
+				<a href="https://www.facebook.com/Jonathan.campoverde.5686" target="_blank" class="text-gray-400 hover:text-brand-green transition" title="Facebook">
+					<i class="fa-brands fa-facebook text-sm"></i>
+				</a>
+				<a href="https://www.instagram.com/invites/contact/?utm_content=37ws0ft&obrf=1x09qp1r0l70l" target="_blank" class="text-gray-400 hover:text-brand-green transition" title="Instagram">
+					<i class="fa-brands fa-instagram text-sm"></i>
+				</a>
+			</div>
+
+			<div class="flex items-center space-x-4">
+				<span class="hidden md:inline"><i class="fa-solid fa-location-dot text-brand-green mr-1"></i> Cuenca</span>
+				<span><i class="fa-solid fa-phone text-brand-green mr-1"></i> 0991142422 - 4103100</span>
+				<button onclick="openLoginModal()" class="text-brand-green font-bold hover:underline inline-flex items-center space-x-1 cursor-pointer">
+					<i class="fa-solid fa-lock"></i>
+					<span></span>
+				</button>
+			</div>
+		</div>
+	</div>
+
+    <!-- Top Bar Navigation (Header Principal) -->
+    <header id="header" class="sticky top-0 w-full z-50 bg-gray-900/95 backdrop-blur-md border-b border-gray-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center space-x-3 cursor-pointer group" onclick="switchView('landing')">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-brand-green to-emerald-400 flex items-center justify-center shadow-lg shadow-brand-green/20 group-hover:scale-105 transition">
+                   <img id="dynamic-logo-img" src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=150&q=80" alt="Logo MetalPlast" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <span class="text-lg sm:text-xl font-black tracking-wider text-white">RECICLADORA METAL<span class="text-brand-green">PLAST</span></span>
+                    <p class="text-[9px] tracking-widest text-gray-400 uppercase font-bold">Reciclamos hoy, transformamos mañana</p>
+                </div>
+            </div>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center space-x-6 text-sm font-semibold">
+                <a href="#inicio" onclick="switchView('landing')" class="text-brand-green transition hover:text-emerald-400">Inicio</a>
+                <a href="#nosotros" onclick="switchView('landing')" class="text-gray-300 transition hover:text-brand-green">Nosotros</a>
+                <a href="#servicios" onclick="switchView('landing')" class="text-gray-300 transition hover:text-brand-green">Servicios</a>
+                <a href="#mayoristas" onclick="switchView('landing')" class="text-gray-300 transition hover:text-gray-100">Mayoristas</a>
+                <a href="#galeria" onclick="switchView('landing')" class="text-gray-300 transition hover:text-brand-green">Galería</a>
+                <a href="#blog" onclick="switchView('landing')" class="text-gray-300 transition hover:text-brand-green">Blog</a>
+                <a href="#contacto" onclick="switchView('landing')" class="text-gray-300 transition hover:text-brand-green">Contacto</a>
+            </nav>
+
+            <!-- Actions / BackOffice Button -->
+            <div class="flex items-center space-x-3">
+                <a href="https://wa.me/593991142422?text=Hola%20Recicladora%20Metal%20Plast,%20deseo%20vender%20material%20de%20reciclaje" target="_blank" class="hidden sm:inline-flex items-center space-x-2 bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2.5 rounded-xl font-bold text-sm shadow-lg shadow-emerald-600/30 transition transform hover:-translate-y-0.5">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>WhatsApp</span>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- MAIN APP CONTAINER -->
+    <main id="app-container" class="">
+        
+        <!-- ================= LANDING PAGE VIEW ================= -->
+        <div id="view-landing">
+            
+            <!-- Hero Section -->
+			<section id="inicio" class="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gray-900 py-24 px-4 sm:px-6 lg:px-8">
+				<div id="hero-bg-container" class="absolute inset-0 z-0 opacity-30 bg-cover bg-center transition-all duration-700" style="background-image: url('https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=1920&q=80');">
+					<div class="absolute inset-0 bg-gradient-to-r from-gray-950 via-gray-950/80 to-transparent"></div>
+				</div>
+				
+				<div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10 items-center">
+					<div class="lg:col-span-7 space-y-6">
+						<div class="inline-flex items-center space-x-2 bg-brand-green/10 border border-brand-green/30 px-3.5 py-1.5 rounded-full text-brand-green text-xs font-bold uppercase tracking-wider shadow-sm">
+							<i class="fa-solid fa-award"></i>
+							<span>Alianza Estratégica Club de Recicladores Adelca</span>
+						</div>
+						
+						<h1 class="text-4xl sm:text-6xl font-black text-white tracking-tight leading-tight">
+							Reciclamos Hoy, <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-green to-emerald-400">Transformamos Mañana</span>
+						</h1>
+						
+						<p class="text-base sm:text-lg text-gray-300 max-w-xl leading-relaxed">
+							Compra y venta de cartón, chatarra metalica, papel, plástico duro y PET al por mayor y menor. Ubicados en Cuenca.
+						</p>
+						
+						<div class="flex flex-wrap gap-4 pt-2">
+							<a href="#vender" class="bg-brand-green hover:bg-emerald-600 text-gray-950 font-extrabold px-8 py-4 rounded-xl shadow-xl shadow-brand-green/20 transition transform hover:-translate-y-0.5 flex items-center space-x-3">
+								<i class="fa-solid fa-hand-holding-dollar text-lg"></i>
+								<span>Vender mi Material</span>
+							</a>
+							<a href="#mayoristas" class="bg-gray-800 hover:bg-gray-700 border border-gray-700 text-white font-bold px-8 py-4 rounded-xl transition flex items-center space-x-3">
+								<i class="fa-solid fa-industry text-brand-green text-lg"></i>
+								<span>Comprar al por Mayor</span>
+							</a>
+						</div>
+					</div>
+
+					<!-- Quick Sell Widget Formulario -->
+					<div id="vender" class="lg:col-span-5 bg-gray-950/90 border border-gray-800 p-6 sm:p-8 rounded-3xl shadow-2xl backdrop-blur-md">
+						<div class="flex items-center space-x-3 mb-6 border-b border-gray-800 pb-4">
+							<div class="w-12 h-12 rounded-xl bg-brand-green/20 text-brand-green flex items-center justify-center font-bold text-lg shadow-inner">
+								<i class="fa-solid fa-bolt"></i>
+							</div>
+							<div>
+								<h3 class="text-xl font-bold text-white tracking-wide">Vende tus Reciclajes</h3>
+								<p class="text-xs text-gray-400">Llena el formulario y recibe tu código de seguimiento</p>
+							</div>
+						</div>
+
+						<form onsubmit="handleClientOrder(event)" class="space-y-4">
+							<div>
+								<label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Tu Nombre Completo</label>
+								<input type="text" id="order-name" required class="w-full bg-gray-900 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-green transition" placeholder="Ej. Carlos Mendoza">
+							</div>
+							
+							<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+								<div>
+									<label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Teléfono / WhatsApp</label>
+									<input type="tel" id="order-phone" required class="w-full bg-gray-900 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-green transition" placeholder="0991142422">
+								</div>
+								<div>
+									<label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Material Principal</label>
+									<select id="order-material" class="w-full bg-gray-900 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-green transition">
+										<option>Cartón</option>
+										<option>Chatarra Ferrosa</option>
+										<option>Chatarra No Ferrosa</option>
+										<option>Plástico PET / Duro</option>
+										<option>Papel Archivo</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+								<div>
+									<label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Cantidad Estimada (KG)</label>
+									<input type="text" id="order-qty" required class="w-full bg-gray-900 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-green transition" placeholder="Ej. 50 Kg">
+								</div>
+								<div>
+									<label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Ciudad / Sector</label>
+									<input type="text" id="order-city" required class="w-full bg-gray-900 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-green transition" placeholder="Cuenca / Quito">
+								</div>
+							</div>
+
+							<button type="submit" class="w-full bg-gradient-to-r from-brand-green to-emerald-500 hover:from-emerald-500 hover:to-emerald-600 text-gray-950 font-black py-4 rounded-xl shadow-lg shadow-brand-green/30 transition transform hover:-translate-y-0.5 uppercase tracking-wider text-xs sm:text-sm flex items-center justify-center space-x-2 mt-2">
+								<i class="fa-solid fa-paper-plane text-sm"></i>
+								<span>Enviar Solicitud y Obtener Código</span>
+							</button>
+						</form>
+					</div>
+				</div>
+			</section>
+			
+			<!-- Nosotros -->
+			<section id="nosotros" class="py-24 bg-gray-900 border-t border-gray-800">
+				<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+					<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+						<div class="space-y-6">
+							<span class="text-brand-green font-bold text-xs uppercase tracking-widest bg-brand-green/10 px-3 py-1 rounded-full">Sobre Nosotros</span>
+							<h2 class="text-3xl sm:text-4xl font-black text-white leading-tight">Líderes en Gestión Integral de Residuos en el Ecuador</h2>
+							<p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+								En Recicladora MetalPlast conectamos a los generadores de residuos, recicladores de base e industrias pesadas como ADELCA. Contamos con plantas modernas en Cuenca equipadas con básculas certificadas, centros de enfardado de alta capacidad y procesos totalmente transparentes.
+							</p>
+						</div>
+						<div class="bg-gray-950 border border-gray-800 rounded-3xl p-8 shadow-2xl space-y-6">
+							<h3 class="text-xl font-bold text-white mb-4 flex items-center space-x-2">
+								<i class="fa-solid fa-check-to-slot text-brand-green"></i>
+								<span>Nuestros Pilares</span>
+							</h3>
+							<ul class="space-y-4 text-sm sm:text-base text-gray-300">
+								<li class="flex items-start space-x-3">
+									<i class="fa-solid fa-circle-check text-brand-green mt-1"></i>
+									<div><strong>Compromiso Ambiental:</strong> Reducción directa de huella de carbono.</div>
+								</li>
+								<li class="flex items-start space-x-3">
+									<i class="fa-solid fa-circle-check text-brand-green mt-1"></i>
+									<div><strong>Precios Justos:</strong> Tarifas competitivas actualizadas al mercado.</div>
+								</li>
+								<li class="flex items-start space-x-3">
+									<i class="fa-solid fa-circle-check text-brand-green mt-1"></i>
+									<div><strong>Pago Inmediato:</strong> Transferencias y efectivo seguro.</div>
+								</li>
+								<li class="flex items-start space-x-3">
+									<i class="fa-solid fa-circle-check text-brand-green mt-1"></i>
+									<div><strong>Logística Propia:</strong> Retiro a domicilio para industrias y mayoristas.</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+            <!-- Services Section -->
+            <section id="servicios" class="py-24 bg-gray-950">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                        <div>
+                            <span class="text-brand-green font-bold text-xs uppercase tracking-widest bg-brand-green/10 px-3 py-1 rounded-full">¿Qué Compramos?</span>
+                            <h2 class="text-3xl sm:text-4xl font-black text-white mt-3">Materiales que Reciclamos</h2>
+                            <p class="text-gray-400 mt-2 text-sm sm:text-base">Acércate a nuestras bodegas o contáctanos directamente.</p>
+                        </div>
+                    </div>
+                    <div id="services-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                </div>
+            </section>
+
+            <!-- Wholesale Section -->
+            <section id="mayoristas" class="py-24 bg-gray-900 border-t border-gray-800">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                        <div class="lg:col-span-6 space-y-6">
+                            <span class="text-brand-green font-bold text-xs uppercase tracking-widest bg-brand-green/10 px-3 py-1 rounded-full">Mercado Mayorista</span>
+                            <h2 class="text-3xl sm:text-4xl font-black text-white">Venta de Material Procesado al por Mayor</h2>
+                            <p class="text-gray-300 text-sm sm:text-base leading-relaxed">
+                                Abastecemos a industrias con material enfardado y clasificado con estándares de exportación.
+                            </p>
+                        </div>
+                        <div class="lg:col-span-6 bg-gray-950 border border-gray-800 p-8 rounded-3xl shadow-2xl">
+                            <h3 class="text-xl font-bold text-white mb-2">Registro Proveedores Mayoristas</h3>
+                            <form onsubmit="handleWholesaleForm(event)" class="space-y-4">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Empresa</label>
+                                        <input type="text" id="ws-company" required class="w-full bg-gray-900 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:border-brand-green" placeholder="Razón Social">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Ciudad</label>
+                                        <input type="text" id="ws-city" required class="w-full bg-gray-900 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:border-brand-green" placeholder="Cuenca / Quito">
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Contacto</label>
+                                        <input type="text" id="ws-name" required class="w-full bg-gray-900 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:border-brand-green" placeholder="Nombre">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Teléfono</label>
+                                        <input type="tel" id="ws-phone" required class="w-full bg-gray-900 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:border-brand-green" placeholder="0991142422">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Requerimiento y Tonelaje</label>
+                                    <input type="text" id="ws-material" required class="w-full bg-gray-900 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:border-brand-green" placeholder="Ej. 5 Toneladas">
+                                </div>
+                                <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3.5 rounded-xl transition uppercase text-sm shadow-lg">
+                                    Enviar Requerimiento Mayorista
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Gallery Section -->
+            <section id="galeria" class="py-24 bg-gray-950 border-t border-gray-800">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-2xl mx-auto mb-16">
+                        <span class="text-brand-green font-bold text-xs uppercase tracking-widest bg-brand-green/10 px-3 py-1 rounded-full">Multimedia</span>
+                        <h2 class="text-3xl sm:text-4xl font-black text-white mt-3">Galería de Instalaciones</h2>
+                    </div>
+                    <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+                </div>
+            </section>
+
+			<!-- Blog Section -->
+			<section id="blog" class="py-24 bg-gray-900 border-t border-gray-800">
+				<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+					<div class="text-center max-w-2xl mx-auto mb-16">
+						<span class="text-brand-green font-bold text-xs uppercase tracking-widest bg-brand-green/10 px-3.5 py-1.5 rounded-full shadow-sm">Educación & Manualidades</span>
+						<h2 class="text-3xl sm:text-4xl font-black text-white mt-3 tracking-tight">Blog y Proyectos Sostenibles</h2>
+						<p class="text-gray-400 text-sm mt-2">Aprende sobre reciclaje industrial, cuidado ambiental y manualidades creativas con materiales reutilizables.</p>
+					</div>
+					
+					<div id="blog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+						<div class="bg-gray-950 border border-gray-800 rounded-3xl overflow-hidden shadow-2xl hover:border-brand-green/50 transition duration-300 flex flex-col group">
+							<div class="relative h-48 overflow-hidden">
+								<img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=800&q=80" alt="Reciclaje" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+								<span class="absolute top-4 left-4 bg-brand-green text-gray-950 text-[10px] font-black uppercase px-2.5 py-1 rounded-lg">Guía</span>
+							</div>
+							<div class="p-6 flex flex-col flex-grow">
+								<span class="text-xs text-gray-500 mb-1"><i class="fa-regular fa-calendar mr-1"></i> Octubre 2026</span>
+								<h3 class="text-lg font-bold text-white mb-2 group-hover:text-brand-green transition">Cómo clasificar el cartón y plástico correctamente</h3>
+								<p class="text-gray-400 text-xs line-clamp-3 mb-4 leading-relaxed">Conoce los estándares de calidad que manejamos para la recepción de materiales al por mayor y cómo prepararlos en tu negocio o hogar.</p>
+								<div class="mt-auto pt-4 border-t border-gray-900 flex items-center justify-between">
+									<button onclick="openBlogModal('Cómo clasificar el cartón y plástico correctamente', 'Octubre 2026', 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=800&q=80', 'El reciclaje eficiente comienza desde el origen. Cuando las empresas y los hogares separan adecuadamente el cartón, el papel archivo y los plásticos PET, optimizamos los procesos industriales en conjunto con el Club de Recicladores Adelca...', ['Excelente iniciativa para cuidar el planeta.', 'Me ayudó mucho a organizar mi local comercial.'])" class="text-brand-green hover:text-emerald-400 text-xs font-bold flex items-center space-x-1.5 transition cursor-pointer">
+										<span>Leer artículo completo</span>
+										<i class="fa-solid fa-arrow-right text-[10px]"></i>
+									</button>
+									<span class="text-gray-500 text-xs"><i class="fa-regular fa-comments mr-1"></i> 2</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Modal Flotante de Lectura y Comentarios (Público) -->
+			<div id="blog-modal" class="fixed inset-0 z-50 hidden bg-gray-950/80 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+				<div class="bg-gray-900 border border-gray-800 rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative animate-in fade-in zoom-in duration-200">
+					<button onclick="closeBlogModal()" class="absolute top-4 right-4 bg-gray-800 hover:bg-gray-700 text-white w-10 h-10 rounded-full flex items-center justify-center transition cursor-pointer z-10">
+						<i class="fa-solid fa-xmark text-lg"></i>
+					</button>
+
+					<div class="relative h-64 w-full">
+						<img id="modal-img" src="" alt="Artículo" class="w-full h-full object-cover">
+						<div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+					</div>
+
+					<div class="p-6 sm:p-8 space-y-6">
+						<div>
+							<span id="modal-date" class="text-brand-green text-xs font-bold uppercase tracking-wider"></span>
+							<h2 id="modal-title" class="text-2xl sm:text-3xl font-black text-white mt-1"></h2>
+						</div>
+
+						<div id="modal-body" class="text-gray-300 text-sm leading-relaxed space-y-4 border-b border-gray-800 pb-6"></div>
+
+						<div class="space-y-4">
+							<h3 class="text-lg font-bold text-white flex items-center space-x-2">
+								<i class="fa-regular fa-comments text-brand-green"></i>
+								<span>Comentarios de la Comunidad</span>
+							</h3>
+							<div id="modal-comments-list" class="space-y-3 max-h-48 overflow-y-auto pr-2"></div>
+							<form onsubmit="handleCommentSubmit(event)" class="space-y-3 pt-2">
+								<input type="text" id="comment-author" required placeholder="Tu Nombre" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-brand-green">
+								<textarea id="comment-text" required rows="2" placeholder="Escribe tu comentario o sugerencia..." class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none focus:border-brand-green resize-none"></textarea>
+								<button type="submit" class="bg-brand-green hover:bg-emerald-600 text-gray-950 font-bold px-6 py-2.5 rounded-xl text-xs uppercase tracking-wider transition cursor-pointer shadow-lg shadow-brand-green/20">
+									Publicar Comentario
+								</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Contacto -->
+			<section id="contacto" class="py-24 bg-gray-900 border-t border-gray-800">
+				<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+					<div class="text-center max-w-3xl mx-auto mb-16">
+						<span class="text-brand-green font-bold text-xs uppercase tracking-widest bg-brand-green/10 px-3 py-1 rounded-full">Contáctanos</span>
+						<h2 class="text-3xl sm:text-4xl font-black text-white mt-3">Estamos listos para atenderte</h2>
+						<p class="text-gray-400 mt-3 text-sm sm:text-base">
+							Visita nuestra planta principal o contáctanos a través de nuestros canales de atención directa en Cuenca.
+						</p>
+					</div>
+
+					<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+						<div class="bg-gray-950 border border-gray-800 rounded-3xl p-8 space-y-6 shadow-2xl">
+							<h3 class="text-xl font-bold text-white mb-4">Información de Contacto</h3>
+							<div class="space-y-4 text-sm text-gray-300">
+								<div class="flex items-start space-x-3">
+									<i class="fa-solid fa-location-dot text-brand-green text-lg mt-1"></i>
+									<div>
+										<strong class="text-white block">Dirección:</strong>
+										Autopista Cuenca Azogues del Mall del Alto a 200 metros junto al Mega Hierro.
+									</div>
+								</div>
+								<div class="flex items-start space-x-3">
+									<i class="fa-solid fa-phone text-brand-green text-lg mt-1"></i>
+									<div>
+										<strong class="text-white block">Teléfonos:</strong>
+										Convencional: 4103100 | Celulares: 0991142422 - 0980023428
+									</div>
+								</div>
+							</div>
+							<div class="pt-4 flex flex-wrap gap-4">
+								<a href="https://wa.me/593991142422?text=Hola%20Recicladora%20Metal%20Plast,%20deseo%20más%20información" target="_blank" class="bg-brand-green hover:bg-emerald-600 text-gray-950 font-bold px-6 py-3.5 rounded-xl transition flex items-center space-x-2 shadow-lg shadow-brand-green/20">
+									<i class="fa-brands fa-whatsapp text-lg"></i>
+									<span>RECICLADORA METAL PLAST</span>
+								</a>
+								<a href="https://maps.app.goo.gl/gHWoXKMKJv1qrmXZA?g_st=awb" target="_blank" class="bg-gray-800 hover:bg-gray-700 text-white font-bold px-6 py-3.5 rounded-xl border border-gray-700 transition flex items-center space-x-2">
+									<i class="fa-solid fa-map-location-dot text-brand-green"></i>
+									<span>Ver en Google Maps</span>
+								</a>
+							</div>
+						</div>
+
+						<div class="bg-gray-950 border border-gray-800 rounded-3xl overflow-hidden shadow-2xl h-[380px]">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.7!2d-79.0!3d-2.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwNTQnMDIuMCJTIDc5wrAwMCcwMC4wIlc!5e0!3m2!1ses!2sec!4v1600000000000!5m2!1ses!2sec" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full h-full grayscale contrast-125 opacity-80 hover:grayscale-0 transition duration-500"></iframe>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<!-- Footer -->
+			<footer class="bg-gray-950 border-t border-gray-800 py-16 text-gray-400 text-sm">
+				<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+					<div class="space-y-4">
+						<div class="flex items-center space-x-3">
+							<div class="w-10 h-10 rounded-xl bg-brand-green flex items-center justify-center text-gray-950 font-black shadow-lg shadow-brand-green/20">
+								<i class="fa-solid fa-recycle"></i>
+							</div>
+							<span class="text-lg font-black text-white tracking-wider">METALPLAST</span>
+						</div>
+						<p class="text-xs text-gray-400 leading-relaxed">
+							Recicladora oficial comprometida con la gestión ambiental, compra de chatarra, cartón y plástico en el país.
+						</p>
+						<div class="pt-2">
+							<h4 class="text-white font-bold mb-2 uppercase text-xs tracking-wider">Ubicación GPS</h4>
+							<a href="https://maps.app.goo.gl/gHWoXKMKJv1qrmXZA?g_st=awb" target="_blank" class="text-emerald-400 hover:text-emerald-300 text-xs flex items-center space-x-2 transition">
+								<i class="fa-solid fa-map-location-dot text-brand-green text-sm"></i>
+								<span>Ver ubicación exacta en Google Maps</span>
+							</a>
+						</div>
+						<div class="space-y-4">
+							<h4 class="text-white font-bold mb-4 uppercase text-xs tracking-wider border-l-2 border-brand-green pl-2">¡Conéctate con nosotros!</h4>
+
+							<!-- BOTONES DE REDES SOCIALES CON ESTILO -->
+							<div class="flex items-center space-x-3 pt-2">
+								<!-- TikTok -->
+								<a href="https://www.tiktok.com/@chichico736?_r=1&_t=ZS-9ATcIfmYhL0" target="_blank" class="w-9 h-9 rounded-xl bg-gray-900 border border-gray-800 text-gray-300 hover:text-white hover:bg-brand-green hover:border-brand-green flex items-center justify-center transition shadow-md" title="TikTok">
+									<i class="fa-brands fa-tiktok text-sm"></i>
+								</a>
+								<!-- Facebook -->
+								<a href="https://www.facebook.com/Jonathan.campoverde.5686" target="_blank" class="w-9 h-9 rounded-xl bg-gray-900 border border-gray-800 text-gray-300 hover:text-white hover:bg-blue-600 hover:border-blue-600 flex items-center justify-center transition shadow-md" title="Facebook">
+									<i class="fa-brands fa-facebook-f text-sm"></i>
+								</a>
+								<!-- Instagram -->
+								<a href="https://www.instagram.com/invites/contact/?utm_content=37ws0ft&obrf=1x09qp1r0l70l" target="_blank" class="w-9 h-9 rounded-xl bg-gray-900 border border-gray-800 text-gray-300 hover:text-white hover:bg-pink-600 hover:border-pink-600 flex items-center justify-center transition shadow-md" title="Instagram">
+									<i class="fa-brands fa-instagram text-sm"></i>
+								</a>
+							</div>
+						</div>
+						</div>
+
+					<div>
+						<h4 class="text-white font-bold mb-4 uppercase text-xs tracking-wider border-l-2 border-brand-green pl-2">Enlaces Rápidos</h4>
+						<ul class="space-y-2.5 text-xs">
+							<li><a href="#inicio" class="hover:text-brand-green transition flex items-center space-x-2"><i class="fa-solid fa-chevron-right text-[10px] text-brand-green"></i><span>Inicio</span></a></li>
+							<li><a href="#nosotros" class="hover:text-brand-green transition flex items-center space-x-2"><i class="fa-solid fa-chevron-right text-[10px] text-brand-green"></i><span>Sobre Nosotros</span></a></li>
+							<li><a href="#servicios" class="hover:text-brand-green transition flex items-center space-x-2"><i class="fa-solid fa-chevron-right text-[10px] text-brand-green"></i><span>Servicios de Compra</span></a></li>
+							<li><a href="#mayoristas" class="hover:text-brand-green transition flex items-center space-x-2"><i class="fa-solid fa-chevron-right text-[10px] text-brand-green"></i><span>Proveedores Mayoristas</span></a></li>
+						</ul>
+					</div>
+
+					<div>
+						<h4 class="text-white font-bold mb-4 uppercase text-xs tracking-wider border-l-2 border-brand-green pl-2">Materiales</h4>
+						<ul class="space-y-2.5 text-xs text-gray-300">
+							<li class="flex items-center space-x-2"><i class="fa-solid fa-check text-brand-green text-[10px]"></i><span>Cartón y Papel Archivo</span></li>
+							<li class="flex items-center space-x-2"><i class="fa-solid fa-check text-brand-green text-[10px]"></i><span>Chatarra Ferrosa y No Ferrosa</span></li>
+							<li class="flex items-center space-x-2"><i class="fa-solid fa-check text-brand-green text-[10px]"></i><span>Plástico PET y Duro</span></li>
+						</ul>
+					</div>
+
+					<div class="space-y-4">
+						<h4 class="text-white font-bold mb-4 uppercase text-xs tracking-wider border-l-2 border-brand-green pl-2">Contacto & Alianzas</h4>
+						<p class="text-xs leading-relaxed">
+							<i class="fa-solid fa-location-dot text-brand-green mr-1"></i> Autopista Cuenca Azogues del Mall del Alto a 200 metros junto al Mega Hierro.
+						</p>
+						<p class="text-xs">
+							<i class="fa-solid fa-phone text-brand-green mr-1"></i> Convencional: <strong>4103100</strong>
+						</p>
+						<p class="text-xs">
+							<i class="fa-solid fa-mobile-screen text-brand-green mr-1"></i> Celulares: <strong>0991142422</strong> - <strong>0980023428</strong>
+						</p>
+						<div class="pt-2">
+							<a href="https://wa.me/593991142422?text=Hola%20Recicladora%20Metal%20Plast" target="_blank" class="inline-flex items-center space-x-2 bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2.5 rounded-xl text-xs font-bold transition shadow-lg shadow-emerald-600/20">
+								<i class="fa-brands fa-whatsapp text-sm"></i>
+								<span>RECICLADORA METAL PLAST</span>
+							</a>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-gray-900 text-center text-xs text-gray-500 space-y-2">
+					<p>&copy; 2026 Recicladora MetalPlast. Todos los derechos reservados. Desarrollado con tecnología web avanzada.</p>
+					<p class="text-brand-green/80 font-medium"><i class="fa-solid fa-shield-halved mr-1"></i> Alianza Estratégica Club de Recicladores Adelca</p>
+				</div>
+			</footer>
+        </div>
+
+        <!-- ================= BACKOFFICE ADMIN VIEW ================= -->
+        <div id="view-backoffice" class="hidden min-h-screen bg-gray-950 pb-20">
+            <div class="bg-gray-900 border-b border-gray-800 py-6 px-4 sm:px-8">
+                <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                    <div>
+                        <div class="inline-flex items-center space-x-2 bg-brand-green/10 text-brand-green px-3 py-1 rounded-full text-xs font-bold mb-2">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <span>Panel de Control Administrativo</span>
+                        </div>
+                        <h1 class="text-2xl sm:text-3xl font-black text-white">Administración MetalPlast</h1>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <button onclick="switchView('landing')" class="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2.5 rounded-xl text-sm font-bold border border-gray-700 transition">
+                            Ver Sitio Web en Vivo
+                        </button>
+                        <button onclick="handleLogout()" class="bg-red-600 hover:bg-red-500 text-white px-4 py-2.5 rounded-xl text-sm font-bold transition cursor-pointer">
+                            Salir
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Admin Tabs -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-8 mt-6">
+                <div class="flex flex-wrap gap-2 border-b border-gray-800 pb-4">
+                    <button onclick="switchAdminTab('servicios')" id="tab-btn-servicios" class="admin-tab-btn px-4 py-2.5 rounded-xl font-bold text-sm bg-brand-green text-gray-950 transition cursor-pointer">Servicios</button>
+                    <button onclick="switchAdminTab('pedidos')" id="tab-btn-pedidos" class="admin-tab-btn px-4 py-2.5 rounded-xl font-bold text-sm bg-gray-900 text-gray-300 transition cursor-pointer">Pedidos(<span id="orders-badge">0</span>)</button>
+                    <button onclick="switchAdminTab('mayoristas')" id="tab-btn-mayoristas" class="admin-tab-btn px-4 py-2.5 rounded-xl font-bold text-sm bg-gray-900 text-gray-300 transition cursor-pointer">Proveedores(<span id="wholesale-badge">0</span>)</button>
+                    <button onclick="switchAdminTab('usuarios')" id="tab-btn-usuarios" class="admin-tab-btn px-4 py-2.5 rounded-xl font-bold text-sm bg-gray-900 text-gray-300 transition cursor-pointer">Usuarios</button>
+                    <button onclick="switchAdminTab('galeria')" id="tab-btn-galeria" class="admin-tab-btn px-4 py-2.5 rounded-xl font-bold text-sm bg-gray-900 text-gray-300 transition cursor-pointer">Galería</button>
+                    <button onclick="switchAdminTab('blog')" id="tab-btn-blog" class="admin-tab-btn px-4 py-2.5 rounded-xl font-bold text-sm bg-gray-900 text-gray-300 transition cursor-pointer">Blog</button>
+                    <button onclick="switchAdminTab('config')" id="tab-btn-config" class="admin-tab-btn px-4 py-2.5 rounded-xl font-bold text-sm bg-gray-900 text-gray-300 transition cursor-pointer">Secciones</button>
+					<button onclick="switchAdminTab('seo')" id="tab-btn-seo" class="admin-tab-btn px-4 py-2.5 rounded-xl font-bold text-sm bg-gray-900 text-gray-300 transition cursor-pointer">SEO</button>
+					<button onclick="switchAdminTab('logo')" id="tab-btn-logo" class="admin-tab-btn px-4 py-2.5 rounded-xl font-bold text-sm bg-gray-900 text-gray-300 transition cursor-pointer">Logo</button>
+					<button onclick="switchAdminTab('seguridad')" id="tab-btn-seguridad" class="admin-tab-btn px-4 py-2.5 rounded-xl font-bold text-sm bg-gray-900 text-gray-300 transition cursor-pointer">Seguridad</button>
+                </div>
+            </div>
+
+            <!-- Admin Contents -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-8 mt-8">
+                
+                <!-- TAB 1: SERVICES -->
+                <div id="admin-tab-servicios" class="admin-tab-content space-y-6">
+                    <div class="flex justify-between items-center bg-gray-900 p-6 rounded-2xl border border-gray-800">
+                        <h3 class="text-lg font-bold text-white">Gestión de Materiales y Servicios</h3>
+                        <button onclick="openServiceModal()" class="bg-brand-green text-gray-950 font-bold px-4 py-2.5 rounded-xl text-sm cursor-pointer">+ Nuevo Material</button>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="admin-services-list"></div>
+                </div>
+
+                <!-- TAB 2: ORDERS -->
+				<div id="admin-tab-pedidos" class="admin-tab-content hidden space-y-6">
+					<div class="bg-gray-900 p-6 rounded-2xl border border-gray-800">
+						<h3 class="text-lg font-bold text-white">Solicitudes y Códigos de Seguimiento de Clientes</h3>
+					</div>
+					<div class="bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden">
+						<table class="w-full text-left text-sm">
+							<thead>
+								<tr class="bg-gray-950 text-gray-400 text-xs uppercase border-b border-gray-800">
+									<th class="p-4">Código / Cliente</th>
+									<th class="p-4">Contacto (Teléfono / Ciudad)</th> <!-- NUEVA COLUMNA -->
+									<th class="p-4">Material / Cantidad</th>
+									<th class="p-4">Estado</th>
+									<th class="p-4 text-right">Acciones</th>
+								</tr>
+							</thead>
+							<tbody id="admin-orders-table" class="divide-y divide-gray-800"></tbody>
+						</table>
+					</div>
+				</div>
+
+                <!-- TAB 3: WHOLESALE -->
+				<div id="admin-tab-mayoristas" class="admin-tab-content hidden space-y-6">
+					<div class="bg-gray-900 p-6 rounded-2xl border border-gray-800">
+						<h3 class="text-lg font-bold text-white">Proveedores Mayoristas y Estados</h3>
+					</div>
+					<div class="bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden">
+						<table class="w-full text-left text-sm">
+							<thead>
+								<tr class="bg-gray-950 text-gray-400 text-xs uppercase border-b border-gray-800">
+									<th class="p-4">Empresa / Contacto</th>
+									<th class="p-4">Contacto (Teléfono / Ciudad)</th> <!-- NUEVA COLUMNA -->
+									<th class="p-4">Requerimiento</th>
+									<th class="p-4">Estado</th>
+									<th class="p-4 text-right">Acciones</th>
+								</tr>
+							</thead>
+							<tbody id="admin-wholesale-table" class="divide-y divide-gray-800"></tbody>
+						</table>
+					</div>
+				</div>
+
+                <!-- TAB 4: USERS MANAGEMENT -->
+                <div id="admin-tab-usuarios" class="admin-tab-content hidden space-y-6">
+                    <div class="flex justify-between items-center bg-gray-900 p-6 rounded-2xl border border-gray-800">
+                        <h3 class="text-lg font-bold text-white">Gestión de Usuarios Administradores</h3>
+                        <button onclick="openUserModal()" class="bg-brand-green text-gray-950 font-bold px-4 py-2.5 rounded-xl text-sm cursor-pointer">+ Nuevo Usuario</button>
+                    </div>
+                    <div class="bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden">
+                        <table class="w-full text-left text-sm">
+                            <thead>
+                                <tr class="bg-gray-950 text-gray-400 text-xs uppercase border-b border-gray-800">
+                                    <th class="p-4">Usuario / Correo</th>
+                                    <th class="p-4">Rol</th>
+                                    <th class="p-4 text-right">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="admin-users-table" class="divide-y divide-gray-800"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- TAB 5: GALLERY -->
+                <div id="admin-tab-galeria" class="admin-tab-content hidden space-y-6">
+                    <div class="flex justify-between items-center bg-gray-900 p-6 rounded-2xl border border-gray-800">
+                        <h3 class="text-lg font-bold text-white">Galería Multimedia</h3>
+                        <button onclick="openGalleryModal()" class="bg-brand-green text-gray-950 font-bold px-4 py-2.5 rounded-xl text-sm cursor-pointer">+ Añadir Foto/Video</button>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6" id="admin-gallery-grid"></div>
+                </div>
+
+                <!-- TAB 6: BLOG -->
+                <div id="admin-tab-blog" class="admin-tab-content hidden space-y-6">
+                    <div class="flex justify-between items-center bg-gray-900 p-6 rounded-2xl border border-gray-800">
+                        <h3 class="text-lg font-bold text-white">Editor de Blog y Manualidades</h3>
+                        <button onclick="openAdminBlogModal()" class="bg-brand-green text-gray-950 font-bold px-4 py-2.5 rounded-xl text-sm cursor-pointer">+ Nuevo Artículo</button>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="admin-blog-grid"></div>
+                </div>
+
+                <!-- TAB 7: CONFIG -->
+				<div id="admin-tab-config" class="admin-tab-content hidden space-y-6">
+					<div class="bg-gray-900 p-8 rounded-2xl border border-gray-800 max-w-2xl mx-auto space-y-6">
+						<h3 class="text-xl font-bold text-white">Configuración de Secciones y Fondos</h3>
+						
+						<form onsubmit="handleConfigUpdate(event)" class="space-y-4 border-b border-gray-800 pb-6">
+							<h4 class="text-sm font-bold text-brand-green uppercase tracking-wider">Fondo Principal</h4>
+							<div>
+								<label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Subir Imagen de Fondo Principal (Escritorio)</label>
+								<input type="file" id="config-file-upload" accept="image/*" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-sm text-gray-400">
+							</div>
+							<div>
+								<label class="block text-xs font-semibold uppercase text-gray-400 mb-1">O URL de Imagen</label>
+								<input type="url" id="config-hero-url" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:border-brand-green" placeholder="https://...">
+							</div>
+							<button type="submit" class="w-full bg-brand-green text-gray-950 font-bold py-3.5 rounded-xl cursor-pointer">Guardar Configuración de Fondo</button>
+						</form>
+
+						<form onsubmit="saveSectionsConfig(event)" class="space-y-4">
+							<h4 class="text-sm font-bold text-brand-green uppercase tracking-wider">Títulos y Encabezados</h4>
+							<div>
+								<label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Seleccionar Sección para Editar Título / Encabezado</label>
+								<select id="section-selector" onchange="loadSectionData(this.value)" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:border-brand-green">
+									<option value="hero">Sección Principal (Hero)</option>
+									<option value="nosotros">Nosotros</option>
+									<option value="servicios">Servicios</option>
+									<option value="mayoristas">Mayoristas</option>
+								</select>
+							</div>
+							<div id="section-dynamic-fields" class="space-y-4"></div>
+							<button type="submit" class="bg-brand-green text-gray-950 font-bold px-6 py-3 rounded-xl text-xs uppercase tracking-wider cursor-pointer shadow-lg shadow-brand-green/20">Guardar Cambios</button>
+						</form>
+					</div>
+				</div>
+
+				<!-- TAB 8: SEO (DIRECTO A FIREBASE) -->
+				<div id="admin-tab-seo" class="admin-tab-content hidden space-y-6">
+					<div class="bg-gray-900 p-8 rounded-2xl border border-gray-800 max-w-3xl mx-auto space-y-6">
+						<div class="flex items-center space-x-3">
+							<div class="w-10 h-10 rounded-xl bg-brand-green/10 flex items-center justify-center text-brand-green">
+								<i class="fa-solid fa-chart-line text-lg"></i>
+							</div>
+							<div>
+								<h3 class="text-xl font-bold text-white">Optimizador SEO (Estilo Yoast)</h3>
+								<p class="text-xs text-gray-400">Configura las metatags para posicionar en Google en Cuenca.</p>
+							</div>
+						</div>
+
+						<div class="bg-gray-950 p-5 rounded-2xl border border-gray-800 space-y-2">
+							<span class="text-[10px] font-bold uppercase tracking-wider text-brand-green block">Vista previa en los resultados de Google</span>
+							<div class="bg-white p-4 rounded-xl text-gray-800 font-sans shadow-sm">
+								<div class="text-xs text-gray-600 truncate flex items-center space-x-1">
+									<span>https://recicladorametalplast.com</span>
+									<span id="seo-preview-slug" class="text-gray-400">/inicio</span>
+								</div>
+								<div id="seo-preview-title" class="text-blue-700 text-base font-medium hover:underline cursor-pointer truncate mt-0.5">
+									Recicladora MetalPlast | Compra de Chatarra y Reciclaje al por mayor
+								</div>
+								<div id="seo-preview-desc" class="text-gray-600 text-xs line-clamp-2 mt-1">
+									Centro de acopio autorizado del Club de Recicladores Adelca. Recibimos cartón, plástico PET, cobre, aluminio y fierro al mejor precio en Cuenca.
+								</div>
+							</div>
+						</div>
+
+						<form onsubmit="saveSeoConfig(event)" class="space-y-4">
+							<div>
+								<label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Palabra Clave Objetivo (Focus Keyword)</label>
+								<input type="text" id="seo-keyword" oninput="checkSeoRealtime()" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:border-brand-green" placeholder="ej. compra de chatarra en Cuenca">
+							</div>
+							<div>
+								<label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Título SEO (Meta Title - Máx. 60 caracteres)</label>
+								<input type="text" id="seo-title" maxlength="60" oninput="checkSeoRealtime()" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:border-brand-green">
+								<span id="seo-title-count" class="text-[10px] text-gray-500 mt-1 block">0 / 60 caracteres</span>
+							</div>
+							<div>
+								<label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Descripción SEO (Meta Description - Máx. 160 caracteres)</label>
+								<textarea id="seo-desc" maxlength="160" rows="3" oninput="checkSeoRealtime()" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:border-brand-green resize-none"></textarea>
+								<span id="seo-desc-count" class="text-[10px] text-gray-500 mt-1 block">0 / 160 caracteres</span>
+							</div>
+
+							<div class="bg-gray-950 p-5 rounded-2xl border border-gray-800 space-y-3">
+								<h4 class="text-xs font-bold uppercase text-gray-300">Análisis SEO de Contenido</h4>
+								<ul id="seo-analysis-list" class="space-y-2 text-xs">
+									<li class="text-emerald-400"><i class="fa-solid fa-circle-check mr-1"></i> Listo para guardar directamente en Firebase.</li>
+								</ul>
+							</div>
+
+							<button type="submit" class="w-full bg-brand-green text-gray-950 font-bold py-3.5 rounded-xl cursor-pointer hover:bg-emerald-400 transition">
+								Guardar Configuración SEO
+							</button>
+						</form>
+					</div>
+				</div>
+				<div id="admin-tab-seguridad" class="admin-tab-content hidden space-y-6">
+					<div class="bg-gray-900 p-8 rounded-2xl border border-gray-800 max-w-xl mx-auto space-y-6">
+						<div class="flex items-center space-x-3">
+							<div class="w-10 h-10 rounded-xl bg-brand-green/10 flex items-center justify-center text-brand-green">
+								<i class="fa-solid fa-key text-lg"></i>
+							</div>
+							<div>
+								<h3 class="text-xl font-bold text-white">Cambiar Contraseña de Administrador</h3>
+								<p class="text-xs text-gray-400">Actualiza la contraseña de acceso al panel de control.</p>
+							</div>
+						</div>
+
+						<form onsubmit="handlePasswordChange(event)" class="space-y-4">
+							<div>
+								<label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Correo Electrónico (Admin)</label>
+								<input type="email" id="sec-email" required class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:border-brand-green" value="admin@metalplast.com">
+							</div>
+							<div>
+								<label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Contraseña Actual</label>
+								<input type="password" id="sec-current-pass" required class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:border-brand-green" placeholder="••••••">
+							</div>
+							<div>
+								<label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Nueva Contraseña</label>
+								<input type="password" id="sec-new-pass" required class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:border-brand-green" placeholder="Mínimo 6 caracteres">
+							</div>
+							<button type="submit" class="w-full bg-brand-green text-gray-950 font-bold py-3.5 rounded-xl cursor-pointer hover:bg-emerald-400 transition">
+								Actualizar Contraseña
+							</button>
+						</form>
+					</div>
+				</div>
+				<!-- ADMIN LOGOTIPO  -->
+				<div id="admin-tab-logo" class="admin-tab-content hidden space-y-6">
+					<div class="flex items-center space-x-3">
+							<div class="w-10 h-10 rounded-xl bg-brand-green/10 flex items-center justify-center text-brand-green">
+								<i class="fa-solid fa-chart-line text-lg"></i>
+							</div>
+							<div>
+								<h3 class="text-xl font-bold text-white">Logotipo de la Empresa</h3>
+								<p class="text-xs text-gray-400">Configura el logotipo.</p>
+							</div>
+						</div>
+				
+					<form onsubmit="saveLogoConfig(event)" class="space-y-4 border-b border-gray-800 pb-6">
+					<h4 class="text-sm font-bold text-brand-green uppercase tracking-wider"></h4>
+					<div>
+						<label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Subir Logo (Archivo)</label>
+						<input type="file" id="logo-file-upload" accept="image/*" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-sm text-gray-400">
+					</div>
+					<div>
+						<label class="block text-xs font-semibold uppercase text-gray-400 mb-1">O URL del Logo</label>
+						<input type="url" id="logo-url-input" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:border-brand-green" placeholder="https://...">
+					</div>
+					<button type="submit" class="w-full bg-brand-green text-gray-950 font-bold py-3.5 rounded-xl cursor-pointer">Guardar Logotipo</button>
+					</form
+				</div>
+
+				
+
+            </div>
+        </div>
+    </main>
+
+    <!-- ================= LOGIN MODAL ================= -->
+    <div id="login-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-gray-900 border border-gray-800 rounded-3xl max-w-md w-full p-8 space-y-6 shadow-2xl relative">
+            <button onclick="closeLoginModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white cursor-pointer"><i class="fa-solid fa-xmark text-xl"></i></button>
+            <div class="text-center">
+                <div class="w-12 h-12 bg-brand-green/20 text-brand-green rounded-2xl mx-auto flex items-center justify-center text-xl font-bold mb-3">
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white">Acceso Administrador</h3>
+                <p class="text-xs text-gray-400 mt-1">Ingresa tus credenciales para gestionar MetalPlast</p>
+            </div>
+			<!-- Modifica esta parte en tu HTML -->
+			<form onsubmit="handleLoginSubmit(event)" class="space-y-4">
+				<div>
+					<label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Correo Electrónico</label>
+					<input type="email" id="login-email" required autocomplete="off" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:border-brand-green" placeholder="admin@metalplast.com">
+				</div>
+				<div>
+					<label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Contraseña</label>
+					<input type="password" id="login-pass" required autocomplete="new-password" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white focus:border-brand-green" placeholder="••••••">
+				</div>
+				<button type="submit" class="w-full bg-brand-green hover:bg-emerald-600 text-gray-950 font-bold py-3.5 rounded-xl transition cursor-pointer">Ingresar al Panel</button>
+			</form>
+        </div>
+    </div>
+
+    <!-- Service Modal -->
+    <div id="service-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-gray-900 border border-gray-800 rounded-3xl max-w-lg w-full p-6 space-y-6">
+            <h3 id="service-modal-title" class="text-xl font-bold text-white">Nuevo Material / Servicio</h3>
+            <form onsubmit="saveService(event)" class="space-y-4">
+                <input type="hidden" id="service-edit-id">
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Nombre del Material</label>
+                    <input type="text" id="service-name" required class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white">
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Icono FontAwesome</label>
+                        <input type="text" id="service-icon" required class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white" value="fa-solid fa-recycle">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Precio</label>
+                        <input type="text" id="service-price" required class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white" placeholder="$0.12 / Kg">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Subir Imagen desde Escritorio</label>
+                    <input type="file" id="service-file-upload" accept="image/*" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-sm text-gray-400">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Descripción</label>
+                    <textarea id="service-desc" rows="3" required class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white"></textarea>
+                </div>
+                <div class="flex space-x-4">
+                    <button type="button" onclick="closeServiceModal()" class="w-1/2 bg-gray-800 py-3 rounded-xl font-bold cursor-pointer">Cancelar</button>
+                    <button type="submit" class="w-1/2 bg-brand-green text-gray-950 py-3 rounded-xl font-bold cursor-pointer">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- User Modal -->
+    <div id="user-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-gray-900 border border-gray-800 rounded-3xl max-w-md w-full p-6 space-y-6">
+            <h3 id="user-modal-title" class="text-xl font-bold text-white">Nuevo Usuario Admin</h3>
+            <form onsubmit="saveUser(event)" class="space-y-4">
+                <input type="hidden" id="user-edit-id">
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Correo Electrónico</label>
+                    <input type="email" id="user-email" required class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Contraseña</label>
+                    <input type="password" id="user-pass" required class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Rol</label>
+                    <select id="user-role" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white">
+                        <option value="Administrador">Administrador</option>
+                        <option value="Supervisor">Supervisor</option>
+                    </select>
+                </div>
+                <div class="flex space-x-4">
+                    <button type="button" onclick="closeUserModal()" class="w-1/2 bg-gray-800 py-3 rounded-xl font-bold cursor-pointer">Cancelar</button>
+                    <button type="submit" class="w-1/2 bg-brand-green text-gray-950 py-3 rounded-xl font-bold cursor-pointer">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+	<!-- Gallery Modal -->
+    <div id="gallery-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-gray-900 border border-gray-800 rounded-3xl max-w-md w-full p-6 space-y-6">
+            <h3 class="text-xl font-bold text-white">Añadir / Editar Multimedia</h3>
+            <form onsubmit="saveGallery(event)" class="space-y-4">
+                <input type="hidden" id="gallery-edit-id">
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Título</label>
+                    <input type="text" id="gallery-title" required class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Subir Imagen desde Escritorio</label>
+                    <input type="file" id="gallery-file-upload" accept="image/*" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-sm text-gray-400">
+                </div>
+                <div class="flex space-x-4">
+                    <button type="button" onclick="closeGalleryModal()" class="w-1/2 bg-gray-800 py-3 rounded-xl font-bold cursor-pointer">Cancelar</button>
+                    <button type="submit" class="w-1/2 bg-brand-green text-gray-950 py-3 rounded-xl font-bold cursor-pointer">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Blog Modal -->
+    <div id="admin-blog-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-gray-900 border border-gray-800 rounded-3xl max-w-lg w-full p-6 space-y-6">
+            <h3 id="blog-modal-title" class="text-xl font-bold text-white">Artículo / Manualidad</h3>
+            <form onsubmit="saveBlog(event)" class="space-y-4">
+                <input type="hidden" id="blog-edit-id">
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Título del Artículo</label>
+                    <input type="text" id="blog-title" required class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Categoría</label>
+                    <input type="text" id="blog-category" required class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white" value="Manualidades">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Subir Imagen desde Escritorio</label>
+                    <input type="file" id="blog-file-upload" accept="image/*" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-sm text-gray-400">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Contenido</label>
+                    <textarea id="blog-content" rows="4" required class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white"></textarea>
+                </div>
+                <div class="flex space-x-4">
+                    <button type="button" onclick="closeAdminBlogModal()" class="w-1/2 bg-gray-800 py-3 rounded-xl font-bold cursor-pointer">Cancelar</button>
+                    <button type="submit" class="w-1/2 bg-brand-green text-gray-950 py-3 rounded-xl font-bold cursor-pointer">Publicar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+	let state = {
+		services: [],
+		orders: [],
+		wholesale: [],
+		users: [],
+		gallery: [],
+		blog: [],
+		seo: {
+			keyword: "compra de chatarra en Cuenca",
+			title: "Recicladora MetalPlast | Reciclamos Hoy, Transformamos Mañana",
+			desc: "Centro de acopio autorizado del Club de Recicladores Adelca. Recibimos cartón, plástico PET, cobre, aluminio y fierro al mejor precio en Cuenca."
+		},
+		heroBg: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=1920&q=80"
+	};
+
+	let sectionTexts = {
+		hero: { title: "Reciclamos hoy, transformamos mañana", subtitle: "Club de Recicladores Adelca" },
+		nosotros: { title: "Líderes en Gestión Integral de Residuos en Ecuador" },
+		servicios: { title: "Nuestros Servicios de Reciclaje Industrial" },
+		mayoristas: { title: "Beneficios Exclusivos para Proveedores Mayoristas" }
+	};
+
+	// Función para aplicar SEO en tiempo real al DOM de la página
+	function applySeoToDOM(title, desc) {
+		if (title) {
+			document.title = title;
+			const dynTitle = document.getElementById('dynamic-title');
+			if (dynTitle) dynTitle.innerText = title;
+		}
+		if (desc) {
+			const dynMeta = document.getElementById('dynamic-meta-desc');
+			if (dynMeta) dynMeta.setAttribute('content', desc);
+		}
+	}
+
+	// ================= SINCRONIZACIÓN AUTOMÁTICA CON FIREBASE =================
+	async function cargarDatosDesdeFirebase() {
+		if (!window.db) return;
+		const { collection, getDocs, doc, getDoc } = window.firebaseCollections;
+
+		try {
+			const servSnapshot = await getDocs(collection(window.db, "services"));
+			if (!servSnapshot.empty) {
+				state.services = servSnapshot.docs.map(doc => ({ firebaseId: doc.id, ...doc.data() }));
+			}
+
+			const ordSnapshot = await getDocs(collection(window.db, "orders"));
+			if (!ordSnapshot.empty) {
+				state.orders = ordSnapshot.docs.map(doc => ({ firebaseId: doc.id, ...doc.data() }));
+			}
+
+			const whSnapshot = await getDocs(collection(window.db, "wholesale"));
+			if (!whSnapshot.empty) {
+				state.wholesale = whSnapshot.docs.map(doc => ({ firebaseId: doc.id, ...doc.data() }));
+			}
+
+			const usrSnapshot = await getDocs(collection(window.db, "users"));
+			if (!usrSnapshot.empty) {
+				state.users = usrSnapshot.docs.map(doc => ({ firebaseId: doc.id, ...doc.data() }));
+			}
+
+			const galSnapshot = await getDocs(collection(window.db, "gallery"));
+			if (!galSnapshot.empty) {
+				state.gallery = galSnapshot.docs.map(doc => ({ firebaseId: doc.id, ...doc.data() }));
+			}
+
+			const blogSnapshot = await getDocs(collection(window.db, "blog"));
+			if (!blogSnapshot.empty) {
+				state.blog = blogSnapshot.docs.map(doc => ({ firebaseId: doc.id, ...doc.data() }));
+			}
+
+			// Cargar SEO desde Firebase Firestore (Colección settings -> Documento seo)
+			const seoDocRef = doc(window.db, "settings", "seo");
+			const seoSnap = await getDoc(seoDocRef);
+			if (seoSnap.exists()) {
+				state.seo = seoSnap.data();
+				applySeoToDOM(state.seo.title, state.seo.desc);
+				
+				// Rellenar inputs del Backoffice SEO
+				const kwInput = document.getElementById('seo-keyword');
+				const titleInput = document.getElementById('seo-title');
+				const descInput = document.getElementById('seo-desc');
+				if (kwInput) kwInput.value = state.seo.keyword || '';
+				if (titleInput) titleInput.value = state.seo.title || '';
+				if (descInput) descInput.value = state.seo.desc || '';
+				checkSeoRealtime();
+			} else {
+				applySeoToDOM(state.seo.title, state.seo.desc);
+			}
+			
+			// Agrega esto dentro de tu función async function cargarDatosDesdeFirebase()
+			const logoDocRef = doc(window.db, "settings", "logo");
+			const logoSnap = await getDoc(logoDocRef);
+			if (logoSnap.exists()) {
+				state.logo = logoSnap.data().url;
+				applyLogoToDOM(state.logo);
+				
+				// Rellenar el input de URL en el panel si existe
+				const logoInputUrl = document.getElementById('logo-url-input');
+				if (logoInputUrl) logoInputUrl.value = state.logo;
+			}
+
+			renderPublicAll();
+		} catch (error) {
+			console.error("Error al sincronizar con Firebase:", error);
+		}
+	}
+
+	// ================= NAVEGACIÓN Y VISTAS =================
+	function switchView(view) {
+		const landing = document.getElementById('view-landing');
+		const bo = document.getElementById('view-backoffice');
+		if (view === 'backoffice') {
+			landing.classList.add('hidden');
+			bo.classList.remove('hidden');
+			renderAdminAll();
+		} else {
+			landing.classList.remove('hidden');
+			bo.classList.add('hidden');
+			renderPublicAll();
+		}
+	}
+
+	function switchAdminTab(tabName) {
+		document.querySelectorAll('.admin-tab-content').forEach(el => el.classList.add('hidden'));
+		document.querySelectorAll('.admin-tab-btn').forEach(btn => {
+			btn.classList.remove('bg-brand-green', 'text-gray-950');
+			btn.classList.add('bg-gray-900', 'text-gray-300');
+		});
+		document.getElementById(`admin-tab-${tabName}`).classList.remove('hidden');
+		document.getElementById(`tab-btn-${tabName}`).classList.add('bg-brand-green', 'text-gray-950');
+	}
+
+	function openLoginModal() { 
+		// Limpia los campos al abrir para que no queden rastros
+		document.getElementById('login-email').value = '';
+		document.getElementById('login-pass').value = '';
+		document.getElementById('login-modal').classList.remove('hidden'); 
+	}
+	
+	function closeLoginModal() { 
+		document.getElementById('login-email').value = '';
+		document.getElementById('login-pass').value = '';
+		document.getElementById('login-modal').classList.add('hidden'); 
+	}
+
+	async function handleLoginSubmit(e) {
+		e.preventDefault();
+		const email = document.getElementById('login-email').value;
+		const pass = document.getElementById('login-pass').value;
+		
+		const found = state.users.find(u => u.email === email && u.pass === pass);
+		if (found || (email === 'admin@metalplast.com' && pass === '123456')) {
+			closeLoginModal();
+			switchView('backoffice');
+		} else {
+			alert('Credenciales incorrectas');
+		}
+	}
+
+	function handleLogout() {
+		// Limpia los campos también al salir del BackOffice
+		document.getElementById('login-email').value = '';
+		document.getElementById('login-pass').value = '';
+		switchView('landing');
+	}
+	// ================= RENDERIZADO PÚBLICO =================
+	function renderPublicAll() {
+		document.getElementById('hero-bg-container').style.backgroundImage = `url('${state.heroBg}')`;
+
+		const servicesContainer = document.getElementById('services-grid');
+		if (servicesContainer) {
+			servicesContainer.innerHTML = state.services.map(s => `
+				<div class="bg-gray-900 border border-gray-800 rounded-3xl overflow-hidden shadow-xl flex flex-col justify-between">
+					<div>
+						<div class="h-48 relative"><img src="${s.img}" class="w-full h-full object-cover"></div>
+						<div class="p-6 space-y-3">
+							<h3 class="text-xl font-bold text-white">${s.name}</h3>
+							<p class="text-gray-400 text-sm">${s.desc}</p>
+							<span class="text-brand-green font-bold block">${s.price}</span>
+						</div>
+					</div>
+					<div class="p-6 pt-0">
+						<a href="https://wa.me/593991142422?text=Hola,%20deseo%20vender%20${encodeURIComponent(s.name)}" target="_blank" class="w-full bg-emerald-600/20 text-emerald-400 hover:bg-emerald-600 hover:text-white font-bold py-3 rounded-xl transition flex items-center justify-center space-x-2">
+							<i class="fa-brands fa-whatsapp text-lg"></i>
+							<span>RECICLADORA METAL PLAST</span>
+						</a>
+					</div>
+				</div>
+			`).join('');
+		}
+
+		const galleryContainer = document.getElementById('gallery-grid');
+		if (galleryContainer) {
+			galleryContainer.innerHTML = state.gallery.map(g => `
+				<div class="bg-gray-900 rounded-2xl overflow-hidden border border-gray-800">
+					<img src="${g.url}" class="h-56 w-full object-cover">
+					<div class="p-4"><h4 class="font-bold text-white text-sm">${g.title}</h4></div>
+				</div>
+			`).join('');
+		}
+
+		const blogContainer = document.getElementById('blog-grid');
+		if (blogContainer) {
+			blogContainer.innerHTML = state.blog.map(b => {
+				// Corta el texto en la tarjeta a máximo 120 caracteres para que sea solo vista previa
+				const previewText = b.content.length > 120 ? b.content.substring(0, 120) + '...' : b.content;
+
+				return `
+				<div class="bg-gray-950 rounded-3xl overflow-hidden border border-gray-800 flex flex-col hover:border-brand-green/50 transition duration-300">
+					<div class="relative h-48 overflow-hidden">
+						<img src="${b.img}" class="w-full h-full object-cover">
+						<span class="absolute top-4 left-4 bg-brand-green text-gray-950 text-[10px] font-black uppercase px-2.5 py-1 rounded-lg">${b.category}</span>
+					</div>
+					<div class="p-6 flex flex-col flex-grow justify-between space-y-4">
+						<div>
+							<h3 class="text-lg font-bold text-white line-clamp-2">${b.title}</h3>
+							<p class="text-gray-400 text-xs mt-2 line-clamp-3 leading-relaxed">${previewText}</p>
+						</div>
+						<button onclick="triggerBlogModal('${b.firebaseId}')" class="text-brand-green font-bold text-xs inline-flex items-center space-x-1.5 hover:underline cursor-pointer pt-2 border-t border-gray-900">
+							<span>Leer artículo completo</span>
+							<i class="fa-solid fa-arrow-right text-[10px]"></i>
+						</button>
+					</div>
+				</div>
+				`;
+			}).join('');
+		}
+	}
+
+	// ================= RENDERIZADO ADMINISTRATIVO =================
+	function renderAdminAll() {
+		document.getElementById('admin-services-list').innerHTML = state.services.map(s => `
+			<div class="bg-gray-900 p-5 rounded-2xl border border-gray-800 flex flex-col justify-between">
+				<div>
+					<h4 class="font-bold text-white">${s.name}</h4>
+					<span class="text-xs text-brand-green">${s.price}</span>
+					<p class="text-gray-400 text-xs mt-2 line-clamp-2">${s.desc}</p>
+				</div>
+				<div class="flex justify-end space-x-3 mt-4 pt-2 border-t border-gray-800">
+					<button onclick="editService('${s.firebaseId}')" class="text-gray-400 hover:text-white text-xs cursor-pointer"><i class="fa-solid fa-pen"></i> Editar</button>
+					<button onclick="deleteService('${s.firebaseId}')" class="text-red-400 text-xs cursor-pointer"><i class="fa-solid fa-trash"></i> Eliminar</button>
+				</div>
+			</div>
+		`).join('');
+
+		// Actualizado para Pedidos con Teléfono y Ciudad
+		document.getElementById('admin-orders-table').innerHTML = state.orders.map(o => `
+			<tr class="border-b border-gray-800">
+				<td class="p-4"><span class="text-brand-green font-bold">${o.code}</span><span class="block text-white">${o.name}</span></td>
+				<td class="p-4 text-gray-300"><i class="fa-solid fa-phone text-xs text-brand-green mr-1"></i>${o.phone || 'N/D'}<span class="block text-xs text-gray-500"><i class="fa-solid fa-location-dot mr-1"></i>${o.city || 'Cuenca'}</span></td>
+				<td class="p-4">${o.material} (${o.qty})</td>
+				<td class="p-4"><span class="px-2 py-1 rounded text-xs ${o.status === 'Completado' ? 'bg-green-900 text-green-300' : 'bg-yellow-900 text-yellow-300'}">${o.status}</span></td>
+				<td class="p-4 text-right space-x-2">
+					<button onclick="toggleOrderStatus('${o.firebaseId}')" class="bg-emerald-600 text-white px-3 py-1 rounded text-xs font-bold cursor-pointer">Cambiar Estado</button>
+					<button onclick="deleteOrder('${o.firebaseId}')" class="bg-red-600 text-white px-3 py-1 rounded text-xs font-bold cursor-pointer">Eliminar</button>
+				</td>
+			</tr>
+		`).join('');
+
+		// Actualizado para Proveedores Mayoristas con Teléfono y Ciudad
+		document.getElementById('admin-wholesale-table').innerHTML = state.wholesale.map(w => `
+			<tr class="border-b border-gray-800">
+				<td class="p-4"><span class="text-brand-green font-bold">${w.code}</span><span class="block text-white">${w.company}</span><span class="text-xs text-gray-400">Atn: ${w.name || 'N/D'}</span></td>
+				<td class="p-4 text-gray-300"><i class="fa-solid fa-phone text-xs text-brand-green mr-1"></i>${w.phone || 'N/D'}<span class="block text-xs text-gray-500"><i class="fa-solid fa-location-dot mr-1"></i>${w.city || 'Cuenca'}</span></td>
+				<td class="p-4">${w.material}</td>
+				<td class="p-4"><span class="px-2 py-1 rounded text-xs ${w.status === 'Atendido' ? 'bg-green-900 text-green-300' : 'bg-yellow-900 text-yellow-300'}">${w.status}</span></td>
+				<td class="p-4 text-right space-x-2">
+					<button onclick="toggleWholesaleStatus('${w.firebaseId}')" class="bg-emerald-600 text-white px-3 py-1 rounded text-xs font-bold cursor-pointer">Atendido</button>
+					<button onclick="deleteWholesale('${w.firebaseId}')" class="bg-red-600 text-white px-3 py-1 rounded text-xs font-bold cursor-pointer">Eliminar</button>
+				</td>
+			</tr>
+		`).join('');
+
+		document.getElementById('admin-users-table').innerHTML = state.users.map(u => `
+			<tr class="border-b border-gray-800">
+				<td class="p-4 text-white">${u.email}</td>
+				<td class="p-4">${u.role}</td>
+				<td class="p-4 text-right space-x-3">
+					<button onclick="editUser('${u.firebaseId}')" class="text-gray-400 hover:text-white text-xs cursor-pointer"><i class="fa-solid fa-pen"></i> Editar</button>
+					<button onclick="deleteUser('${u.firebaseId}')" class="text-red-400 text-xs cursor-pointer"><i class="fa-solid fa-trash"></i> Eliminar</button>
+				</td>
+			</tr>
+		`).join('');
+
+		document.getElementById('admin-gallery-grid').innerHTML = state.gallery.map(g => `
+			<div class="bg-gray-900 p-4 rounded-2xl border border-gray-800">
+				<img src="${g.url}" class="h-32 w-full object-cover rounded-xl mb-2">
+				<div class="flex justify-between items-center mt-2">
+					<span class="text-xs text-white font-bold truncate">${g.title}</span>
+					<div class="space-x-2 flex items-center">
+						<button onclick="editGallery('${g.firebaseId}')" class="text-gray-400 hover:text-white text-xs cursor-pointer"><i class="fa-solid fa-pen"></i> Editar</button>
+						<button onclick="deleteGallery('${g.firebaseId}')" class="text-red-400 text-xs cursor-pointer"><i class="fa-solid fa-trash"></i></button>
+					</div>
+				</div>
+			</div>
+		`).join('');
+
+		document.getElementById('admin-blog-grid').innerHTML = state.blog.map(b => `
+			<div class="bg-gray-900 p-4 rounded-2xl border border-gray-800 flex flex-col justify-between">
+				<div>
+					<img src="${b.img}" class="h-32 w-full object-cover rounded-xl mb-2">
+					<span class="text-[10px] bg-brand-green/20 text-brand-green px-2 py-0.5 rounded-full font-bold">${b.category}</span>
+					<h4 class="text-xs text-white font-bold mt-1">${b.title}</h4>
+				</div>
+				<div class="flex justify-end space-x-3 mt-4 pt-2 border-t border-gray-800">
+					<button onclick="editBlog('${b.firebaseId}')" class="text-gray-400 hover:text-white text-xs cursor-pointer"><i class="fa-solid fa-pen"></i> Editar</button>
+					<button onclick="deleteBlog('${b.firebaseId}')" class="text-red-400 text-xs cursor-pointer"><i class="fa-solid fa-trash"></i> Eliminar</button>
+				</div>
+			</div>
+		`).join('');
+
+		document.getElementById('orders-badge').textContent = state.orders.length;
+		document.getElementById('wholesale-badge').textContent = state.wholesale.length;
+	}
+
+	function convertFileToBase64(file) {
+		return new Promise((resolve, reject) => {
+			const reader = new FileReader();
+			reader.readAsDataURL(file);
+			reader.onload = () => resolve(reader.result);
+			reader.onerror = error => reject(error);
+		});
+	}
+
+	// ================= GESTIÓN DE CLIENTES Y PEDIDOS (ORDERS) =================
+	async function handleClientOrder(e) {
+		e.preventDefault();
+		const code = "MP-" + Math.floor(1000 + Math.random() * 9000);
+		const nuevoPedido = {
+			code,
+			name: document.getElementById('order-name').value,
+			phone: document.getElementById('order-phone').value,
+			material: document.getElementById('order-material').value,
+			qty: document.getElementById('order-qty').value,
+			city: document.getElementById('order-city').value,
+			status: "Pendiente",
+			createdAt: new Date().toISOString()
+		};
+
+		try {
+			const { collection, addDoc } = window.firebaseCollections;
+			const docRef = await addDoc(collection(window.db, "orders"), nuevoPedido);
+			state.orders.unshift({ firebaseId: docRef.id, ...nuevoPedido });
+			alert(`¡Solicitud registrada con éxito!\nTu código de seguimiento es: ${code}`);
+			e.target.reset();
+			renderPublicAll();
+		} catch (error) {
+			console.error("Error:", error);
+		}
+	}
+
+	async function toggleOrderStatus(firebaseId) {
+		const o = state.orders.find(x => x.firebaseId === firebaseId);
+		if(o) {
+			o.status = o.status === 'Pendiente' ? 'Completado' : 'Pendiente';
+			const { doc, updateDoc } = window.firebaseCollections;
+			await updateDoc(doc(window.db, "orders", firebaseId), { status: o.status });
+			renderAdminAll();
+		}
+	}
+
+	async function deleteOrder(firebaseId) {
+		const { doc, deleteDoc } = window.firebaseCollections;
+		await deleteDoc(doc(window.db, "orders", firebaseId));
+		state.orders = state.orders.filter(x => x.firebaseId !== firebaseId);
+		renderAdminAll();
+	}
+
+	// ================= GESTIÓN DE MAYORISTAS (WHOLESALE) =================
+	async function handleWholesaleForm(e) {
+		e.preventDefault();
+		const code = "MAY-" + Math.floor(1000 + Math.random() * 9000);
+		const nuevoMayorista = {
+			code,
+			company: document.getElementById('ws-company').value,
+			city: document.getElementById('ws-city').value,
+			name: document.getElementById('ws-name').value,
+			phone: document.getElementById('ws-phone').value,
+			material: document.getElementById('ws-material').value,
+			status: "Pendiente",
+			createdAt: new Date().toISOString()
+		};
+
+		try {
+			const { collection, addDoc } = window.firebaseCollections;
+			const docRef = await addDoc(collection(window.db, "wholesale"), nuevoMayorista);
+			state.wholesale.unshift({ firebaseId: docRef.id, ...nuevoMayorista });
+			alert(`¡Pedido mayorista registrado!\nTu código es: ${code}`);
+			e.target.reset();
+		} catch (error) {
+			console.error("Error:", error);
+		}
+	}
+
+	async function toggleWholesaleStatus(firebaseId) {
+		const w = state.wholesale.find(x => x.firebaseId === firebaseId);
+		if(w) {
+			w.status = w.status === 'Pendiente' ? 'Atendido' : 'Pendiente';
+			const { doc, updateDoc } = window.firebaseCollections;
+			await updateDoc(doc(window.db, "wholesale", firebaseId), { status: w.status });
+			renderAdminAll();
+		}
+	}
+
+	async function deleteWholesale(firebaseId) {
+		const { doc, deleteDoc } = window.firebaseCollections;
+		await deleteDoc(doc(window.db, "wholesale", firebaseId));
+		state.wholesale = state.wholesale.filter(x => x.firebaseId !== firebaseId);
+		renderAdminAll();
+	}
+
+	// ================= GESTIÓN DE SERVICIOS (SERVICES) =================
+	function openServiceModal() { 
+		document.getElementById('service-edit-id').value = '';
+		document.getElementById('service-name').value = '';
+		document.getElementById('service-icon').value = 'fa-solid fa-recycle';
+		document.getElementById('service-price').value = '';
+		document.getElementById('service-desc').value = '';
+		document.getElementById('service-file-upload').value = '';
+		document.getElementById('service-modal-title').textContent = 'Nuevo Material / Servicio';
+		document.getElementById('service-modal').classList.remove('hidden'); 
+	}
+
+	function closeServiceModal() { document.getElementById('service-modal').classList.add('hidden'); }
+
+	function editService(firebaseId) {
+		const service = state.services.find(s => s.firebaseId === firebaseId);
+		if (!service) return;
+		document.getElementById('service-edit-id').value = service.firebaseId;
+		document.getElementById('service-name').value = service.name;
+		document.getElementById('service-icon').value = service.icon || 'fa-solid fa-recycle';
+		document.getElementById('service-price').value = service.price;
+		document.getElementById('service-desc').value = service.desc;
+		document.getElementById('service-modal-title').textContent = 'Editar Material / Servicio';
+		document.getElementById('service-modal').classList.remove('hidden');
+	}
+
+	async function saveService(e) {
+		e.preventDefault();
+		const editId = document.getElementById('service-edit-id').value;
+		const fileInput = document.getElementById('service-file-upload');
+		let imgUrl = "https://images.unsplash.com/photo-1530587191325-3db32d826c1c?auto=format&fit=crop&w=600&q=80";
+		
+		if (fileInput.files && fileInput.files[0]) {
+			imgUrl = await convertFileToBase64(fileInput.files[0]);
+		} else if (editId) {
+			const existing = state.services.find(x => x.firebaseId === editId);
+			if (existing && existing.img) imgUrl = existing.img;
+		}
+
+		const serviceData = {
+			name: document.getElementById('service-name').value,
+			icon: document.getElementById('service-icon').value,
+			price: document.getElementById('service-price').value,
+			desc: document.getElementById('service-desc').value,
+			img: imgUrl
+		};
+
+		const { collection, addDoc, doc, updateDoc } = window.firebaseCollections;
+		if (editId) {
+			await updateDoc(doc(window.db, "services", editId), serviceData);
+			const s = state.services.find(x => x.firebaseId === editId);
+			Object.assign(s, serviceData);
+		} else {
+			const docRef = await addDoc(collection(window.db, "services"), serviceData);
+			state.services.push({ firebaseId: docRef.id, ...serviceData });
+		}
+		closeServiceModal();
+		renderAdminAll();
+		renderPublicAll();
+	}
+
+	async function deleteService(firebaseId) {
+		const { doc, deleteDoc } = window.firebaseCollections;
+		await deleteDoc(doc(window.db, "services", firebaseId));
+		state.services = state.services.filter(x => x.firebaseId !== firebaseId);
+		renderAdminAll();
+		renderPublicAll();
+	}
+
+	// ================= GESTIÓN DE USUARIOS (USERS) =================
+	function openUserModal() { 
+		document.getElementById('user-edit-id').value = '';
+		document.getElementById('user-email').value = '';
+		document.getElementById('user-pass').value = '';
+		document.getElementById('user-role').value = 'Administrador';
+		document.getElementById('user-modal').classList.remove('hidden'); 
+	}
+
+	function closeUserModal() { document.getElementById('user-modal').classList.add('hidden'); }
+
+	function editUser(firebaseId) {
+		const user = state.users.find(u => u.firebaseId === firebaseId);
+		if (!user) return;
+		document.getElementById('user-edit-id').value = user.firebaseId;
+		document.getElementById('user-email').value = user.email;
+		document.getElementById('user-pass').value = user.pass;
+		document.getElementById('user-role').value = user.role;
+		document.getElementById('user-modal').classList.remove('hidden');
+	}
+
+	async function saveUser(e) {
+		e.preventDefault();
+		const editId = document.getElementById('user-edit-id').value;
+		const userData = {
+			email: document.getElementById('user-email').value,
+			pass: document.getElementById('user-pass').value,
+			role: document.getElementById('user-role').value
+		};
+
+		const { collection, addDoc, doc, updateDoc } = window.firebaseCollections;
+		if (editId) {
+			await updateDoc(doc(window.db, "users", editId), userData);
+			const u = state.users.find(x => x.firebaseId === editId);
+			Object.assign(u, userData);
+		} else {
+			const docRef = await addDoc(collection(window.db, "users"), userData);
+			state.users.push({ firebaseId: docRef.id, ...userData });
+		}
+		closeUserModal();
+		renderAdminAll();
+	}
+
+	async function deleteUser(firebaseId) {
+		const { doc, deleteDoc } = window.firebaseCollections;
+		await deleteDoc(doc(window.db, "users", firebaseId));
+		state.users = state.users.filter(x => x.firebaseId !== firebaseId);
+		renderAdminAll();
+	}
+
+	// ================= GESTIÓN DE GALERÍA (GALLERY) =================
+	function openGalleryModal() { 
+		document.getElementById('gallery-edit-id').value = '';
+		document.getElementById('gallery-title').value = '';
+		document.getElementById('gallery-file-upload').value = '';
+		document.getElementById('gallery-modal').classList.remove('hidden'); 
+	}
+
+	function closeGalleryModal() { document.getElementById('gallery-modal').classList.add('hidden'); }
+
+	function editGallery(firebaseId) {
+		const item = state.gallery.find(g => g.firebaseId === firebaseId);
+		if (!item) return;
+		document.getElementById('gallery-edit-id').value = item.firebaseId;
+		document.getElementById('gallery-title').value = item.title;
+		document.getElementById('gallery-modal').classList.remove('hidden');
+	}
+
+	async function saveGallery(e) {
+		e.preventDefault();
+		const editId = document.getElementById('gallery-edit-id').value;
+		const fileInput = document.getElementById('gallery-file-upload');
+		let imgUrl = "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=600&q=80";
+		
+		if (fileInput.files && fileInput.files[0]) {
+			imgUrl = await convertFileToBase64(fileInput.files[0]);
+		} else if (editId) {
+			const existing = state.gallery.find(x => x.firebaseId === editId);
+			if (existing && existing.url) imgUrl = existing.url;
+		}
+
+		const galleryData = {
+			title: document.getElementById('gallery-title').value,
+			url: imgUrl
+		};
+
+		const { collection, addDoc, doc, updateDoc } = window.firebaseCollections;
+		if (editId) {
+			await updateDoc(doc(window.db, "gallery", editId), galleryData);
+			const g = state.gallery.find(x => x.firebaseId === editId);
+			Object.assign(g, galleryData);
+		} else {
+			const docRef = await addDoc(collection(window.db, "gallery"), galleryData);
+			state.gallery.push({ firebaseId: docRef.id, ...galleryData });
+		}
+		closeGalleryModal();
+		renderAdminAll();
+		renderPublicAll();
+	}
+
+	async function deleteGallery(firebaseId) {
+		const { doc, deleteDoc } = window.firebaseCollections;
+		await deleteDoc(doc(window.db, "gallery", firebaseId));
+		state.gallery = state.gallery.filter(x => x.firebaseId !== firebaseId);
+		renderAdminAll();
+		renderPublicAll();
+	}
+
+	// ================= GESTIÓN DE BLOG (BLOG) =================
+	function openAdminBlogModal() {
+		document.getElementById('blog-edit-id').value = '';
+		document.getElementById('blog-title').value = '';
+		document.getElementById('blog-category').value = 'Manualidades';
+		document.getElementById('blog-content').value = '';
+		document.getElementById('admin-blog-modal').classList.remove('hidden');
+	}
+
+	function closeAdminBlogModal() { document.getElementById('admin-blog-modal').classList.add('hidden'); }
+
+	function editBlog(firebaseId) {
+		const article = state.blog.find(b => b.firebaseId === firebaseId);
+		if (!article) return;
+		document.getElementById('blog-edit-id').value = article.firebaseId;
+		document.getElementById('blog-title').value = article.title;
+		document.getElementById('blog-category').value = article.category;
+		document.getElementById('blog-content').value = article.content;
+		document.getElementById('admin-blog-modal').classList.remove('hidden');
+	}
+
+	async function saveBlog(e) {
+		e.preventDefault();
+		const editId = document.getElementById('blog-edit-id').value;
+		const fileInput = document.getElementById('blog-file-upload');
+		let imgUrl = "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=600&q=80";
+		
+		if (fileInput.files && fileInput.files[0]) {
+			imgUrl = await convertFileToBase64(fileInput.files[0]);
+		} else if (editId) {
+			const existing = state.blog.find(x => x.firebaseId === editId);
+			if (existing && existing.img) imgUrl = existing.img;
+		}
+
+		const blogData = {
+			title: document.getElementById('blog-title').value,
+			category: document.getElementById('blog-category').value,
+			content: document.getElementById('blog-content').value,
+			img: imgUrl
+		};
+
+		const { collection, addDoc, doc, updateDoc } = window.firebaseCollections;
+		if (editId) {
+			await updateDoc(doc(window.db, "blog", editId), blogData);
+			const b = state.blog.find(x => x.firebaseId === editId);
+			Object.assign(b, blogData);
+		} else {
+			const docRef = await addDoc(collection(window.db, "blog"), blogData);
+			state.blog.push({ firebaseId: docRef.id, ...blogData });
+		}
+		closeAdminBlogModal();
+		renderAdminAll();
+		renderPublicAll();
+	}
+
+	async function deleteBlog(firebaseId) {
+		const { doc, deleteDoc } = window.firebaseCollections;
+		await deleteDoc(doc(window.db, "blog", firebaseId));
+		state.blog = state.blog.filter(x => x.firebaseId !== firebaseId);
+		renderAdminAll();
+		renderPublicAll();
+	}
+	
+	// ================= CAMBIO DE CONTRASEÑA ADMIN =================
+	async function handlePasswordChange(e) {
+		e.preventDefault();
+		const email = document.getElementById('sec-email').value.trim();
+		const currentPass = document.getElementById('sec-current-pass').value;
+		const newPass = document.getElementById('sec-new-pass').value;
+
+		if (newPass.length < 6) {
+			alert("La nueva contraseña debe tener al menos 6 caracteres.");
+			return;
+		}
+
+		// Buscar si el usuario existe en el estado local de usuarios
+		let user = state.users.find(u => u.email === email);
+		
+		// Validar contraseña actual (por defecto admin@metalplast.com con pass 123456 o el estado)
+		const isValidDefault = (email === 'admin@metalplast.com' && currentPass === '123456');
+		const isValidStored = (user && user.pass === currentPass);
+
+		if (!isValidDefault && !isValidStored) {
+			alert("La contraseña actual es incorrecta.");
+			return;
+		}
+
+		try {
+			const { doc, updateDoc, collection, addDoc } = window.firebaseCollections;
+
+			if (user && user.firebaseId) {
+				// Actualizar en Firebase si ya existe en la colección users
+				user.pass = newPass;
+				await updateDoc(doc(window.db, "users", user.firebaseId), { pass: newPass });
+			} else {
+				// Si es el admin por defecto y no está en Firestore, lo creamos como documento
+				const newUserDoc = { email, pass: newPass, role: "Administrador" };
+				const docRef = await addDoc(collection(window.db, "users"), newUserDoc);
+				state.users.push({ firebaseId: docRef.id, ...newUserDoc });
+			}
+
+			alert("¡Contraseña actualizada con éxito! Utiliza tu nueva contraseña en tu próximo inicio de sesión.");
+			document.getElementById('sec-current-pass').value = '';
+			document.getElementById('sec-new-pass').value = '';
+			renderAdminAll();
+		} catch (error) {
+			console.error("Error al actualizar contraseña:", error);
+			alert("Hubo un error al actualizar la contraseña en la base de datos.");
+		}
+	}
+
+	// ================= CONFIGURACIONES ADICIONALES =================
+	async function handleConfigUpdate(e) {
+		e.preventDefault();
+		const fileInput = document.getElementById('config-file-upload');
+		const urlInput = document.getElementById('config-hero-url').value;
+		
+		if(fileInput.files && fileInput.files[0]) {
+			state.heroBg = await convertFileToBase64(fileInput.files[0]);
+			alert('¡Fondo actualizado!');
+			renderPublicAll();
+		} else if(urlInput) {
+			state.heroBg = urlInput;
+			alert('¡Fondo actualizado!');
+			renderPublicAll();
+		}
+	}
+
+	let currentComments = [];
+	function openBlogModal(title, date, imgUrl, content, existingComments = []) {
+		document.getElementById('modal-title').innerText = title;
+		document.getElementById('modal-date').innerText = date;
+		document.getElementById('modal-img').src = imgUrl;
+		document.getElementById('modal-body').innerText = content;
+		currentComments = Array.isArray(existingComments) ? [...existingComments] : [];
+		renderComments();
+		document.getElementById('blog-modal').classList.remove('hidden');
+		document.body.style.overflow = 'hidden';
+	}
+	
+	function triggerBlogModal(firebaseId) {
+		const article = state.blog.find(b => b.firebaseId === firebaseId);
+		if (article) {
+			openBlogModal(article.title, 'Publicación Reciente', article.img, article.content, []);
+		}
+	}
+
+	function closeBlogModal() {
+		document.getElementById('blog-modal').classList.add('hidden');
+		document.body.style.overflow = 'auto';
+	}
+
+	function renderComments() {
+		const container = document.getElementById('modal-comments-list');
+		if (!container) return;
+		if (currentComments.length === 0) {
+			container.innerHTML = '<p class="text-xs text-gray-500 italic">Sé el primero en dejar un comentario.</p>';
+			return;
+		}
+		container.innerHTML = currentComments.map(c => `
+			<div class="bg-gray-950/60 border border-gray-800 p-3 rounded-xl text-xs">
+				<strong class="text-brand-green block mb-1">Participante</strong>
+				<p class="text-gray-300">${c}</p>
+			</div>
+		`).join('');
+	}
+
+	function handleCommentSubmit(event) {
+		event.preventDefault();
+		const authorInput = document.getElementById('comment-author');
+		const textInput = document.getElementById('comment-text');
+		if (!authorInput || !textInput) return;
+		const text = textInput.value.trim();
+		if (text) {
+			currentComments.push(`${authorInput.value.trim()}: ${text}`);
+			renderComments();
+			textInput.value = '';
+			authorInput.value = '';
+		}
+	}
+
+	function checkSeoRealtime() {
+		const title = document.getElementById('seo-title').value;
+		const desc = document.getElementById('seo-desc').value;
+		document.getElementById('seo-preview-title').innerText = title || "Título en Google...";
+		document.getElementById('seo-preview-desc').innerText = desc || "Descripción...";
+		document.getElementById('seo-title-count').innerText = `${title.length} / 60 caracteres`;
+		document.getElementById('seo-desc-count').innerText = `${desc.length} / 160 caracteres`;
+	}
+
+	// Función para guardar el SEO directamente en Firebase Cloud Firestore
+	async function saveSeoConfig(event) {
+		event.preventDefault();
+		const keyword = document.getElementById('seo-keyword').value;
+		const title = document.getElementById('seo-title').value;
+		const desc = document.getElementById('seo-desc').value;
+
+		state.seo = { keyword, title, desc };
+
+		try {
+			const { doc, setDoc } = window.firebaseCollections;
+			await setDoc(doc(window.db, "settings", "seo"), state.seo);
+			applySeoToDOM(title, desc);
+			alert("¡Configuración SEO guardada y sincronizada en Firebase con éxito!");
+		} catch (error) {
+			console.error("Error al guardar SEO:", error);
+			alert("Hubo un error al guardar la configuración SEO.");
+		}
+	}
+
+	function loadSectionData(sectionKey) {
+		const container = document.getElementById('section-dynamic-fields');
+		if (!container) return;
+		const data = sectionTexts[sectionKey] || { title: "" };
+		container.innerHTML = `
+			<div>
+				<label class="block text-xs font-semibold uppercase text-gray-400 mb-1">Título ${sectionKey.toUpperCase()}</label>
+				<input type="text" id="input-section-title" value="${data.title}" class="w-full bg-gray-950 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white">
+			</div>
+		`;
+	}
+
+	function saveSectionsConfig(event) {
+		event.preventDefault();
+		const selector = document.getElementById('section-selector');
+		const inputTitle = document.getElementById('input-section-title');
+		if (selector && inputTitle) {
+			sectionTexts[selector.value].title = inputTitle.value;
+			alert(`¡Cambios guardados!`);
+		}
+	}
+	
+	// 1. Objeto de estado global (añade logo si no lo tienes)
+	// state.logo = "URL_O_BASE64_DEL_LOGO";
+
+	// 2. Función para aplicar el logo en la web pública
+	function applyLogoToDOM(logoUrl) {
+		if (logoUrl) {
+			const logoImg = document.getElementById('dynamic-logo-img');
+			if (logoImg) logoImg.src = logoUrl;
+		}
+	}
+
+	// 3. Función para guardar el logo directamente en Firebase (Colección: settings, Documento: logo)
+	async function saveLogoConfig(event) {
+		event.preventDefault();
+		const fileInput = document.getElementById('logo-file-upload');
+		const urlInput = document.getElementById('logo-url-input').value;
+		
+		let logoUrl = state.logo || "";
+
+		if (fileInput.files && fileInput.files[0]) {
+			logoUrl = await convertFileToBase64(fileInput.files[0]);
+		} else if (urlInput) {
+			logoUrl = urlInput;
+		}
+
+		state.logo = logoUrl;
+
+		try {
+			const { doc, setDoc } = window.firebaseCollections;
+			await setDoc(doc(window.db, "settings", "logo"), { url: logoUrl });
+			applyLogoToDOM(logoUrl);
+			alert("¡Logotipo actualizado y guardado en Firebase con éxito!");
+		} catch (error) {
+			console.error("Error al guardar el logo:", error);
+			alert("Hubo un error al guardar el logotipo.");
+		}
+	}
+
+	document.addEventListener("DOMContentLoaded", () => {
+		loadSectionData('hero');
+	});
+    </script>    
+	
+<!-- Importar Firebase SDK desde la nube (Firestore con getDoc y setDoc incluidos) -->
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getFirestore, collection, getDocs, addDoc, updateDoc, deleteDoc, doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyDMMqnJR8tW_ODy45Stc-F9CI0g_oCeOo",
+        authDomain: "recicladorametalplast-41c12.firebaseapp.com",
+        projectId: "recicladorametalplast-41c12",
+        storageBucket: "recicladorametalplast-41c12.appspot.com",
+        messagingSenderId: "726738507167",
+        appId: "1:726738507167:web:67c5a6b3414a8e3aa0d9aa",
+        measurementId: "G-952PCVLECQ"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    window.db = db;
+    window.firebaseCollections = { collection, getDocs, addDoc, updateDoc, deleteDoc, doc, getDoc, setDoc };
+
+    // Sincroniza todos los datos y la configuración SEO automáticamente al cargar
+    cargarDatosDesdeFirebase();
+    console.log("¡Firebase conectado y sincronizado con éxito!");
+	
+	
+	
+	
+</script>
+</body>
+</html>
