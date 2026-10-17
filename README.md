@@ -1,2 +1,2 @@
 # recicladorametalplast
-Página temporal de recicladora
+Contenido diverso
